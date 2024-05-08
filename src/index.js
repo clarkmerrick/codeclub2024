@@ -10,6 +10,18 @@
 
 export default {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
+		if (request.method == "POST"){
+      const data = {
+        requestMethod: "You requested this resource via HTTP POST.",
+      };
+			return Response.json(data);
+		}
+		else {
+			const data = {
+        requestMethod: "POST was not used",
+      };
+
+      return Response.json(data);
+		}
 	},
 };
