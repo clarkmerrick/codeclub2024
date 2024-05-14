@@ -16,6 +16,7 @@ export default {
 		// generate random value from function and print to console
 		let randomValue = getRandomInt(1, 4);
     	console.log("random value: " + randomValue);
+		console.log(request.cf.botManagement.score)
 
 		// if bot score is less than 30
 		if (request.cf.botManagement.score < 30){
@@ -33,10 +34,8 @@ export default {
 
 		// if GET
 		if (request.method == "GET"){
-			const data = {
-			  requestMethod: randomResponse[randomValue],
-			};
-		  return Response.json(data);
+			const remote = "https://origin.week3.codeclub2024.clarkmerrick.com/";
+			return await fetch(remote, request);
 	  	}
 
 		// ALL ELSE
