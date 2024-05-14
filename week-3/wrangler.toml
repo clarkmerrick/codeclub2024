@@ -1,7 +1,7 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "codeclub2024"
+name = "codeclub2024-week-3"
 main = "src/index.js"
-compatibility_date = "2024-05-02"
+compatibility_date = "2024-05-13"
 compatibility_flags = ["nodejs_compat"]
 
 # Automatically place your workloads in an optimal location to minimize latency.

@@ -17,6 +17,12 @@ export default {
 		let randomValue = getRandomInt(1, 4);
     	console.log("random value: " + randomValue);
 
+		// if bot score is less than 30
+		if (request.cf.botManagement.score < 30){
+			const remote = "https://httpbin.org/get";
+			return await fetch(remote, request);
+		}
+
 		// if POST
 		if (request.method == "POST"){
       		const data = {
